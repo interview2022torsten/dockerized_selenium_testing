@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Integration test suite" verbose="1" parallel="tests" thread-count="2">
+
+    <test name="With Chrome">
+        <parameter name="browser" value="chrome" />
+
+        <classes>
+            <class name="org.example.selenium.PageVerificationITCase">
+                <methods>
+                    <include name="pageValidation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="With Firefox">
+        <parameter name="browser" value="firefox" />
+
+        <classes>
+            <class name="org.example.selenium.PageVerificationITCase">
+                <methods>
+                    <include name="pageValidation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
